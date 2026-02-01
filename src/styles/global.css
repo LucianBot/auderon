@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-obsidian: #0A0A0A;
+  --color-platinum: #E8E8E8;
+  --color-gold: #D4AF37;
+  --color-charcoal: #1A1A1A;
+  --color-smoke: #2A2A2A;
+  --color-muted: rgba(232, 232, 232, 0.7);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Satoshi', sans-serif;
+}
+
+body {
+    @apply bg-obsidian text-platinum font-sans antialiased;
+}

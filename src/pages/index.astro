@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Auderon | Dare to Build">
+	<main class="flex-grow flex flex-col justify-center items-center text-center px-4 py-20">
+        <div class="mb-8 opacity-90 hover:opacity-100 transition-opacity">
+            <img src="/logo.svg" alt="Auderon Logo" class="h-32 w-auto mx-auto" />
+        </div>
+		<h1 class="text-6xl md:text-9xl font-heading font-bold text-white mb-8 tracking-tighter">
+			Dare to Build.
+		</h1>
+        <p class="text-xl md:text-3xl text-muted max-w-3xl mx-auto mb-16 font-light leading-relaxed">
+            The studio for those who bridge the gap between <span class="text-white">intention</span> and <span class="text-gold">action</span>.
+        </p>
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <a href="/blog/hello-world" class="bg-gold text-obsidian px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                Read the Manifesto
+            </a>
+            <a href="#" class="border border-smoke text-platinum px-10 py-4 rounded-full font-heading font-bold text-lg hover:border-gold hover:text-gold transition-all duration-300">
+                Explore Projects
+            </a>
+        </div>
+	</main>
+    <footer class="py-8 text-center text-muted text-sm border-t border-smoke/30 w-full">
+        &copy; {new Date().getFullYear()} Auderon. Built with <span class="text-gold">♥</span> by Lucian.
+    </footer>
+</Layout>
