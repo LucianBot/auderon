@@ -3,181 +3,161 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Auderon | For Those Who Dare">
-	<!-- Hero Section -->
-	<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 relative texture-subtle">
-		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.04)_0%,_transparent_60%)]"></div>
-		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(212,175,55,0.02)_0%,_transparent_50%)]"></div>
-		
-		<div class="relative z-10 max-w-5xl mx-auto">
-			<div class="mb-12 opacity-90 hover:opacity-100 transition-opacity duration-500">
-				<img src="/logo.svg" alt="Auderon" class="h-20 md:h-28 w-auto mx-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.15)]" />
+	<!-- Hero Section - Full impact -->
+	<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 bg-obsidian">
+		<div class="relative z-10 max-w-6xl mx-auto">
+			<div class="mb-10">
+				<img src="/logo.svg" alt="Auderon" class="h-16 md:h-20 w-auto mx-auto" />
 			</div>
 			
-			<h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-6 tracking-tight leading-[0.95]">
-				For Those<br class="md:hidden" /> Who Dare.
+			<h1 class="text-6xl md:text-8xl lg:text-9xl font-heading font-bold text-white mb-8 tracking-tighter leading-[0.9] uppercase">
+				For Those<br />Who Dare.
 			</h1>
 			
-			<p class="text-lg md:text-xl text-gold/90 font-heading font-medium tracking-wide uppercase mb-8">
+			<p class="text-xl md:text-2xl text-gold font-heading font-bold tracking-wider uppercase mb-10">
 				Break Free. Become More. Build Boldly.
 			</p>
 			
-			<p class="text-xl md:text-2xl text-platinum/80 max-w-2xl mx-auto mb-16 leading-relaxed">
-				We empower humans to <span class="text-white font-medium">break free of their circumstances</span> and become their best selves. A product studio that transforms intention into <span class="text-gold font-medium">shipped products</span>.
+			<p class="text-lg md:text-xl text-platinum/80 max-w-2xl mx-auto mb-14 leading-relaxed">
+				We empower humans to <span class="text-white font-semibold">break free of their circumstances</span> and become their best selves.
 			</p>
 			
-			<div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-				<a href="/blog/hello-world" class="bg-gold text-obsidian px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.2)] border-2 border-transparent hover:border-gold/20">
+			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+				<a href="/blog/hello-world" class="bg-gold text-obsidian px-12 py-5 font-heading font-bold text-lg uppercase tracking-wide hover:bg-white transition-all duration-200">
 					Read the Manifesto
 				</a>
-				<a href="#philosophy" class="border border-smoke/70 text-platinum px-10 py-4 rounded-full font-heading font-medium text-lg hover:border-gold/50 hover:text-white transition-all duration-300 backdrop-blur-sm">
+				<a href="#philosophy" class="border-2 border-white text-white px-12 py-5 font-heading font-bold text-lg uppercase tracking-wide hover:bg-white hover:text-obsidian transition-all duration-200">
 					Learn More
 				</a>
 			</div>
 		</div>
 		
-		<div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-			<svg class="w-6 h-6 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+		<div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+			<svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
 			</svg>
 		</div>
 	</section>
 
-	<!-- Philosophy Section -->
-	<section id="philosophy" class="py-32 px-6 border-t border-smoke/30 relative">
-		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(212,175,55,0.02)_0%,_transparent_50%)]"></div>
-		<div class="max-w-6xl mx-auto relative z-10">
-			<div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+	<!-- Philosophy Section - Strong boundary -->
+	<section id="philosophy" class="py-28 px-6 bg-charcoal">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 				<div>
-					<p class="text-gold font-heading font-medium text-sm tracking-widest uppercase mb-6">Our Philosophy</p>
-					<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 tracking-tight leading-[1.1]">
-						Dare yourself<br />
-						<span class="text-platinum/60">to greatness.</span>
+					<p class="text-gold font-heading font-bold text-sm tracking-[0.2em] uppercase mb-6">Our Philosophy</p>
+					<h2 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-8 tracking-tight leading-[1] uppercase">
+						Dare Yourself<br />
+						<span class="text-gold">To Greatness.</span>
 					</h2>
-					<div class="divider-gold mb-8"></div>
-					<p class="text-lg text-platinum/80 leading-relaxed mb-6">
-						Your circumstances don't define you—your actions do. We believe everyone has the power to break free and build the life they want. The gap between who you are and who you could become closes one bold decision at a time.
+					<div class="w-24 h-1 bg-gold mb-10"></div>
+					<p class="text-lg text-platinum/90 leading-relaxed mb-6">
+						Your circumstances don't define you—your actions do. We believe everyone has the power to break free and build the life they want.
 					</p>
-					<p class="text-lg text-platinum/60 leading-relaxed">
-						Auderon exists to <span class="text-white">empower humans</span>. To give you the tools, the mindset, and the community to stop waiting and start building. <span class="text-gold">The arena awaits.</span>
+					<p class="text-lg text-platinum/70 leading-relaxed">
+						Auderon exists to <span class="text-white font-semibold">empower humans</span>. To give you the tools, the mindset, and the community to stop waiting and start building.
 					</p>
 				</div>
 				
-				<div class="grid grid-cols-2 gap-6">
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
-						<div class="text-gold text-4xl font-heading font-bold mb-3">01</div>
-						<h3 class="text-white font-heading font-bold text-lg mb-2">Break Free</h3>
-						<p class="text-platinum/60 text-sm leading-relaxed">Your past doesn't own your future. Take the first step today.</p>
+				<div class="grid grid-cols-2 gap-4">
+					<div class="bg-obsidian p-8 border-l-4 border-gold">
+						<div class="text-gold text-5xl font-heading font-bold mb-4">01</div>
+						<h3 class="text-white font-heading font-bold text-xl mb-3 uppercase">Break Free</h3>
+						<p class="text-platinum/70 text-sm leading-relaxed">Your past doesn't own your future. Take the first step today.</p>
 					</div>
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
-						<div class="text-gold text-4xl font-heading font-bold mb-3">02</div>
-						<h3 class="text-white font-heading font-bold text-lg mb-2">Bias to Action</h3>
-						<p class="text-platinum/60 text-sm leading-relaxed">Ship over perfect. Progress over planning. Done beats debating.</p>
+					<div class="bg-obsidian p-8 border-l-4 border-gold">
+						<div class="text-gold text-5xl font-heading font-bold mb-4">02</div>
+						<h3 class="text-white font-heading font-bold text-xl mb-3 uppercase">Bias to Action</h3>
+						<p class="text-platinum/70 text-sm leading-relaxed">Ship over perfect. Progress over planning. Done beats debating.</p>
 					</div>
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
-						<div class="text-gold text-4xl font-heading font-bold mb-3">03</div>
-						<h3 class="text-white font-heading font-bold text-lg mb-2">Compound Growth</h3>
-						<p class="text-platinum/60 text-sm leading-relaxed">Small daily acts create outsized results over time.</p>
+					<div class="bg-obsidian p-8 border-l-4 border-gold">
+						<div class="text-gold text-5xl font-heading font-bold mb-4">03</div>
+						<h3 class="text-white font-heading font-bold text-xl mb-3 uppercase">Compound Growth</h3>
+						<p class="text-platinum/70 text-sm leading-relaxed">Small daily acts create outsized results over time.</p>
 					</div>
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
-						<div class="text-gold text-4xl font-heading font-bold mb-3">04</div>
-						<h3 class="text-white font-heading font-bold text-lg mb-2">Builder Solidarity</h3>
-						<p class="text-platinum/60 text-sm leading-relaxed">We're in the arena with you, not watching from above.</p>
+					<div class="bg-obsidian p-8 border-l-4 border-gold">
+						<div class="text-gold text-5xl font-heading font-bold mb-4">04</div>
+						<h3 class="text-white font-heading font-bold text-xl mb-3 uppercase">Builder Solidarity</h3>
+						<p class="text-platinum/70 text-sm leading-relaxed">We're in the arena with you, not watching from above.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- What We Build Section -->
-	<section class="py-32 px-6 bg-charcoal/30 border-t border-smoke/30">
+	<!-- What We Build Section - Contrast block -->
+	<section class="py-28 px-6 bg-obsidian">
 		<div class="max-w-6xl mx-auto">
-			<div class="text-center mb-20">
-				<p class="text-gold font-heading font-medium text-sm tracking-widest uppercase mb-6">What We Build</p>
-				<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 tracking-tight">
+			<div class="text-center mb-16">
+				<p class="text-gold font-heading font-bold text-sm tracking-[0.2em] uppercase mb-6">What We Build</p>
+				<h2 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight uppercase">
 					Tools for Builders
 				</h2>
-				<p class="text-xl text-platinum/60 max-w-2xl mx-auto">
+				<p class="text-xl text-platinum/70 max-w-2xl mx-auto">
 					Products that help ambitious people turn ideas into reality, faster.
 				</p>
 			</div>
 			
-			<div class="grid md:grid-cols-3 gap-8">
-				<div class="group relative bg-obsidian border border-smoke/50 rounded-2xl p-10 hover:border-gold/40 transition-all duration-500 overflow-hidden">
-					<div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-					<div class="relative z-10">
-						<div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-							<svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-							</svg>
-						</div>
-						<h3 class="text-white font-heading font-bold text-xl mb-3">AI-Powered Workflows</h3>
-						<p class="text-platinum/60 leading-relaxed">Automation that actually works. Less busywork, more building.</p>
+			<div class="grid md:grid-cols-3 gap-6">
+				<div class="group bg-charcoal p-10 border-t-4 border-gold hover:bg-smoke transition-colors duration-200">
+					<div class="w-16 h-16 bg-gold/10 flex items-center justify-center mb-8 group-hover:bg-gold/20 transition-colors">
+						<svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
 					</div>
+					<h3 class="text-white font-heading font-bold text-2xl mb-4 uppercase">AI Workflows</h3>
+					<p class="text-platinum/70 leading-relaxed">Automation that actually works. Less busywork, more building.</p>
 				</div>
 				
-				<div class="group relative bg-obsidian border border-smoke/50 rounded-2xl p-10 hover:border-gold/40 transition-all duration-500 overflow-hidden">
-					<div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-					<div class="relative z-10">
-						<div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-							<svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-							</svg>
-						</div>
-						<h3 class="text-white font-heading font-bold text-xl mb-3">Launch Frameworks</h3>
-						<p class="text-platinum/60 leading-relaxed">Proven playbooks to go from zero to shipped in weeks, not months.</p>
+				<div class="group bg-charcoal p-10 border-t-4 border-gold hover:bg-smoke transition-colors duration-200">
+					<div class="w-16 h-16 bg-gold/10 flex items-center justify-center mb-8 group-hover:bg-gold/20 transition-colors">
+						<svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+						</svg>
 					</div>
+					<h3 class="text-white font-heading font-bold text-2xl mb-4 uppercase">Launch Frameworks</h3>
+					<p class="text-platinum/70 leading-relaxed">Proven playbooks to go from zero to shipped in weeks, not months.</p>
 				</div>
 				
-				<div class="group relative bg-obsidian border border-smoke/50 rounded-2xl p-10 hover:border-gold/40 transition-all duration-500 overflow-hidden">
-					<div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-					<div class="relative z-10">
-						<div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-							<svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-							</svg>
-						</div>
-						<h3 class="text-white font-heading font-bold text-xl mb-3">Builder Community</h3>
-						<p class="text-platinum/60 leading-relaxed">Connect with others who ship. Accountability, feedback, momentum.</p>
+				<div class="group bg-charcoal p-10 border-t-4 border-gold hover:bg-smoke transition-colors duration-200">
+					<div class="w-16 h-16 bg-gold/10 flex items-center justify-center mb-8 group-hover:bg-gold/20 transition-colors">
+						<svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+						</svg>
 					</div>
+					<h3 class="text-white font-heading font-bold text-2xl mb-4 uppercase">Builder Community</h3>
+					<p class="text-platinum/70 leading-relaxed">Connect with others who ship. Accountability, feedback, momentum.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- CTA Section -->
-	<section class="py-32 px-6 border-t border-smoke/30 relative overflow-hidden texture-subtle">
-		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(212,175,55,0.06)_0%,_transparent_60%)]"></div>
-		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(212,175,55,0.03)_0%,_transparent_40%)]"></div>
-		
-		<div class="max-w-4xl mx-auto text-center relative z-10">
-			<p class="text-gold font-heading font-medium text-sm tracking-widest uppercase mb-8">Your Future Starts Now</p>
-			<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 tracking-tight leading-[1.1]">
-				Stop waiting for permission.<br />
-				<span class="text-gold">Dare yourself.</span>
+	<!-- CTA Section - High impact -->
+	<section class="py-32 px-6 bg-gold">
+		<div class="max-w-4xl mx-auto text-center">
+			<p class="text-obsidian/70 font-heading font-bold text-sm tracking-[0.2em] uppercase mb-6">Your Future Starts Now</p>
+			<h2 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-obsidian mb-8 tracking-tight leading-[1] uppercase">
+				Stop Waiting.<br />Dare Yourself.
 			</h2>
-			<p class="text-xl text-platinum/70 max-w-xl mx-auto mb-12 leading-relaxed">
-				The life you want won't build itself. Join the builders who've decided that someday is today. Your best self is waiting.
+			<p class="text-xl text-obsidian/80 max-w-xl mx-auto mb-12 leading-relaxed">
+				The life you want won't build itself. Your best self is waiting.
 			</p>
 			
-			<div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-				<a href="/blog/hello-world" class="bg-gold text-obsidian px-12 py-5 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_40px_rgba(212,175,55,0.25)] border-2 border-transparent hover:border-gold/20">
+			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+				<a href="/blog/hello-world" class="bg-obsidian text-gold px-12 py-5 font-heading font-bold text-lg uppercase tracking-wide hover:bg-charcoal transition-all duration-200">
 					Read the Manifesto
 				</a>
-				<a href="/blog" class="text-platinum hover:text-gold font-heading font-medium text-lg transition-colors duration-300 flex items-center gap-2">
-					Explore the Blog
-					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-					</svg>
+				<a href="/blog" class="border-2 border-obsidian text-obsidian px-12 py-5 font-heading font-bold text-lg uppercase tracking-wide hover:bg-obsidian hover:text-gold transition-all duration-200">
+					Explore Blog →
 				</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- Footer -->
-	<footer class="py-12 px-6 text-center border-t border-smoke/30">
-		<div class="max-w-6xl mx-auto">
-			<img src="/logo.svg" alt="Auderon" class="h-8 w-auto mx-auto mb-6 opacity-60" />
-			<p class="text-muted text-sm">
+	<footer class="py-16 px-6 bg-obsidian border-t border-charcoal">
+		<div class="max-w-6xl mx-auto text-center">
+			<img src="/logo.svg" alt="Auderon" class="h-10 w-auto mx-auto mb-8" />
+			<p class="text-platinum/50 text-sm uppercase tracking-wider">
 				&copy; {new Date().getFullYear()} Auderon. Built with <span class="text-gold">intention</span>.
 			</p>
 		</div>
