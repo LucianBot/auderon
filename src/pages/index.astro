@@ -4,27 +4,32 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Auderon | For Those Who Dare">
 	<!-- Hero Section -->
-	<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 relative">
-		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.03)_0%,_transparent_70%)]"></div>
+	<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 relative texture-subtle">
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.04)_0%,_transparent_60%)]"></div>
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(212,175,55,0.02)_0%,_transparent_50%)]"></div>
 		
 		<div class="relative z-10 max-w-5xl mx-auto">
 			<div class="mb-12 opacity-90 hover:opacity-100 transition-opacity duration-500">
-				<img src="/logo.svg" alt="Auderon" class="h-20 md:h-28 w-auto mx-auto" />
+				<img src="/logo.svg" alt="Auderon" class="h-20 md:h-28 w-auto mx-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.15)]" />
 			</div>
 			
-			<h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-8 tracking-tight leading-[0.95]">
+			<h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-6 tracking-tight leading-[0.95]">
 				For Those<br class="md:hidden" /> Who Dare.
 			</h1>
 			
+			<p class="text-lg md:text-xl text-gold/90 font-heading font-medium tracking-wide uppercase mb-8">
+				Break Free. Become More. Build Boldly.
+			</p>
+			
 			<p class="text-xl md:text-2xl text-platinum/80 max-w-2xl mx-auto mb-16 leading-relaxed">
-				A product studio that transforms <span class="text-white font-medium">intention</span> into <span class="text-gold font-medium">shipped products</span>. We build tools for builders.
+				We empower humans to <span class="text-white font-medium">break free of their circumstances</span> and become their best selves. A product studio that transforms intention into <span class="text-gold font-medium">shipped products</span>.
 			</p>
 			
 			<div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-				<a href="/blog/hello-world" class="bg-gold text-obsidian px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+				<a href="/blog/hello-world" class="bg-gold text-obsidian px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.2)] border-2 border-transparent hover:border-gold/20">
 					Read the Manifesto
 				</a>
-				<a href="#philosophy" class="border border-smoke text-platinum px-10 py-4 rounded-full font-heading font-medium text-lg hover:border-gold/50 hover:text-white transition-all duration-300">
+				<a href="#philosophy" class="border border-smoke/70 text-platinum px-10 py-4 rounded-full font-heading font-medium text-lg hover:border-gold/50 hover:text-white transition-all duration-300 backdrop-blur-sm">
 					Learn More
 				</a>
 			</div>
@@ -38,44 +43,45 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- Philosophy Section -->
-	<section id="philosophy" class="py-32 px-6 border-t border-smoke/30">
-		<div class="max-w-6xl mx-auto">
+	<section id="philosophy" class="py-32 px-6 border-t border-smoke/30 relative">
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(212,175,55,0.02)_0%,_transparent_50%)]"></div>
+		<div class="max-w-6xl mx-auto relative z-10">
 			<div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 				<div>
 					<p class="text-gold font-heading font-medium text-sm tracking-widest uppercase mb-6">Our Philosophy</p>
 					<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 tracking-tight leading-[1.1]">
-						Ideas are cheap.<br />
-						<span class="text-platinum/60">Execution is everything.</span>
+						Dare yourself<br />
+						<span class="text-platinum/60">to greatness.</span>
 					</h2>
 					<div class="divider-gold mb-8"></div>
 					<p class="text-lg text-platinum/80 leading-relaxed mb-6">
-						The gap between "I should build that" and "I shipped it" is where most dreams die. We exist to close that gap.
+						Your circumstances don't define you—your actions do. We believe everyone has the power to break free and build the life they want. The gap between who you are and who you could become closes one bold decision at a time.
 					</p>
 					<p class="text-lg text-platinum/60 leading-relaxed">
-						Auderon is built on a simple belief: <span class="text-white">bias to action wins</span>. Ship over perfect. Progress over planning. The arena over the sidelines.
+						Auderon exists to <span class="text-white">empower humans</span>. To give you the tools, the mindset, and the community to stop waiting and start building. <span class="text-gold">The arena awaits.</span>
 					</p>
 				</div>
 				
 				<div class="grid grid-cols-2 gap-6">
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
 						<div class="text-gold text-4xl font-heading font-bold mb-3">01</div>
-						<h3 class="text-white font-heading font-bold text-lg mb-2">Bias to Action</h3>
-						<p class="text-platinum/60 text-sm leading-relaxed">Ship over perfect. Done is better than debating.</p>
+						<h3 class="text-white font-heading font-bold text-lg mb-2">Break Free</h3>
+						<p class="text-platinum/60 text-sm leading-relaxed">Your past doesn't own your future. Take the first step today.</p>
 					</div>
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
 						<div class="text-gold text-4xl font-heading font-bold mb-3">02</div>
-						<h3 class="text-white font-heading font-bold text-lg mb-2">Compound Progress</h3>
+						<h3 class="text-white font-heading font-bold text-lg mb-2">Bias to Action</h3>
+						<p class="text-platinum/60 text-sm leading-relaxed">Ship over perfect. Progress over planning. Done beats debating.</p>
+					</div>
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
+						<div class="text-gold text-4xl font-heading font-bold mb-3">03</div>
+						<h3 class="text-white font-heading font-bold text-lg mb-2">Compound Growth</h3>
 						<p class="text-platinum/60 text-sm leading-relaxed">Small daily acts create outsized results over time.</p>
 					</div>
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
-						<div class="text-gold text-4xl font-heading font-bold mb-3">03</div>
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-all duration-300 hover:bg-charcoal/70">
+						<div class="text-gold text-4xl font-heading font-bold mb-3">04</div>
 						<h3 class="text-white font-heading font-bold text-lg mb-2">Builder Solidarity</h3>
 						<p class="text-platinum/60 text-sm leading-relaxed">We're in the arena with you, not watching from above.</p>
-					</div>
-					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
-						<div class="text-gold text-4xl font-heading font-bold mb-3">04</div>
-						<h3 class="text-white font-heading font-bold text-lg mb-2">Transparent Process</h3>
-						<p class="text-platinum/60 text-sm leading-relaxed">Show the work. Share the journey. Build in public.</p>
 					</div>
 				</div>
 			</div>
@@ -139,20 +145,22 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- CTA Section -->
-	<section class="py-32 px-6 border-t border-smoke/30 relative overflow-hidden">
-		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(212,175,55,0.05)_0%,_transparent_60%)]"></div>
+	<section class="py-32 px-6 border-t border-smoke/30 relative overflow-hidden texture-subtle">
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(212,175,55,0.06)_0%,_transparent_60%)]"></div>
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(212,175,55,0.03)_0%,_transparent_40%)]"></div>
 		
 		<div class="max-w-4xl mx-auto text-center relative z-10">
+			<p class="text-gold font-heading font-medium text-sm tracking-widest uppercase mb-8">Your Future Starts Now</p>
 			<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 tracking-tight leading-[1.1]">
-				Stop waiting.<br />
-				<span class="text-gold">Start building.</span>
+				Stop waiting for permission.<br />
+				<span class="text-gold">Dare yourself.</span>
 			</h2>
 			<p class="text-xl text-platinum/70 max-w-xl mx-auto mb-12 leading-relaxed">
-				Join the builders who've decided that someday is today. Read our manifesto and see if this is your tribe.
+				The life you want won't build itself. Join the builders who've decided that someday is today. Your best self is waiting.
 			</p>
 			
 			<div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-				<a href="/blog/hello-world" class="bg-gold text-obsidian px-12 py-5 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_40px_rgba(212,175,55,0.25)]">
+				<a href="/blog/hello-world" class="bg-gold text-obsidian px-12 py-5 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_40px_rgba(212,175,55,0.25)] border-2 border-transparent hover:border-gold/20">
 					Read the Manifesto
 				</a>
 				<a href="/blog" class="text-platinum hover:text-gold font-heading font-medium text-lg transition-colors duration-300 flex items-center gap-2">

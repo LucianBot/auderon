@@ -1,0 +1,6 @@
+# Auderon.com robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps (add when generated)
+# Sitemap: https://auderon.com/sitemap.xml
