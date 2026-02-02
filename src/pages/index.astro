@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Auderon | For Those Who Dare">
-	<!-- Hero Section - Full impact -->
-	<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 bg-obsidian">
+	<!-- Hero Section - Full impact (account for fixed header) -->
+	<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 bg-obsidian -mt-16 pt-24">
 		<div class="relative z-10 max-w-6xl mx-auto">
 			<div class="mb-10">
 				<img src="/logo.svg" alt="Auderon" class="h-16 md:h-20 w-auto mx-auto" />
@@ -152,14 +152,4 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 	</section>
-
-	<!-- Footer -->
-	<footer class="py-16 px-6 bg-obsidian border-t border-charcoal">
-		<div class="max-w-6xl mx-auto text-center">
-			<img src="/logo.svg" alt="Auderon" class="h-10 w-auto mx-auto mb-8" />
-			<p class="text-platinum/50 text-sm uppercase tracking-wider">
-				&copy; {new Date().getFullYear()} Auderon. Built with <span class="text-gold">intention</span>.
-			</p>
-		</div>
-	</footer>
 </Layout>

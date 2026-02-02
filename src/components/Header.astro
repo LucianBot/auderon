@@ -1,0 +1,119 @@
+---
+// Header component with Nike-inspired hover states
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-obsidian/95 backdrop-blur-sm border-b border-charcoal">
+	<nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+		<!-- Logo -->
+		<a href="/" class="flex-shrink-0 group">
+			<img 
+				src="/logo.svg" 
+				alt="Auderon" 
+				class="h-6 w-auto transition-opacity duration-200 group-hover:opacity-80"
+			/>
+		</a>
+		
+		<!-- Main Navigation -->
+		<div class="hidden md:flex items-center gap-10">
+			<a 
+				href="/blog" 
+				class="nav-link font-heading font-medium text-sm uppercase tracking-wider text-platinum hover:text-white transition-colors duration-200"
+				class:list={[{ 'text-white': currentPath.startsWith('/blog') }]}
+			>
+				<span class="relative">
+					Blog
+					<span class="nav-underline"></span>
+				</span>
+			</a>
+			<a 
+				href="#" 
+				class="nav-link font-heading font-medium text-sm uppercase tracking-wider text-platinum/50 cursor-not-allowed"
+			>
+				<span class="relative flex items-center gap-2">
+					Merch
+					<span class="text-[10px] bg-gold/20 text-gold px-2 py-0.5 rounded-full">Soon</span>
+				</span>
+			</a>
+			<a 
+				href="/blog/hello-world" 
+				class="nav-link font-heading font-medium text-sm uppercase tracking-wider text-platinum hover:text-white transition-colors duration-200"
+			>
+				<span class="relative">
+					Manifesto
+					<span class="nav-underline"></span>
+				</span>
+			</a>
+		</div>
+		
+		<!-- CTA Button -->
+		<div class="flex items-center gap-4">
+			<a 
+				href="/blog" 
+				class="hidden sm:block bg-gold text-obsidian px-6 py-2.5 font-heading font-bold text-xs uppercase tracking-wider hover:bg-white transition-colors duration-200"
+			>
+				Start Here
+			</a>
+			
+			<!-- Mobile Menu Button -->
+			<button 
+				id="mobile-menu-btn"
+				class="md:hidden p-2 text-platinum hover:text-white transition-colors"
+				aria-label="Toggle menu"
+			>
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</button>
+		</div>
+	</nav>
+	
+	<!-- Mobile Menu -->
+	<div id="mobile-menu" class="hidden md:hidden bg-charcoal border-t border-smoke">
+		<div class="px-6 py-6 space-y-4">
+			<a href="/blog" class="block font-heading font-medium text-sm uppercase tracking-wider text-platinum hover:text-gold transition-colors">
+				Blog
+			</a>
+			<a href="#" class="block font-heading font-medium text-sm uppercase tracking-wider text-platinum/50">
+				Merch <span class="text-[10px] bg-gold/20 text-gold px-2 py-0.5 rounded-full ml-2">Soon</span>
+			</a>
+			<a href="/blog/hello-world" class="block font-heading font-medium text-sm uppercase tracking-wider text-platinum hover:text-gold transition-colors">
+				Manifesto
+			</a>
+			<a href="/blog" class="block bg-gold text-obsidian px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider text-center mt-4">
+				Start Here
+			</a>
+		</div>
+	</div>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16"></div>
+
+<style>
+	.nav-link .nav-underline {
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: currentColor;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.3s ease;
+	}
+	
+	.nav-link:hover .nav-underline {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+</style>
+
+<script>
+	const menuBtn = document.getElementById('mobile-menu-btn');
+	const mobileMenu = document.getElementById('mobile-menu');
+	
+	menuBtn?.addEventListener('click', () => {
+		mobileMenu?.classList.toggle('hidden');
+	});
+</script>
