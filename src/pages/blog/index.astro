@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout title="Blog | Auderon">
+    <section class="max-w-4xl mx-auto px-6 py-20">
+        <!-- Header -->
+        <header class="mb-20 text-center">
+            <a href="/" class="inline-flex items-center gap-2 text-muted hover:text-gold transition-colors mb-12 font-heading text-sm">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back to Home
+            </a>
+            <h1 class="text-5xl md:text-6xl font-heading font-bold text-white mb-6 tracking-tight">
+                The Blog
+            </h1>
+            <p class="text-xl text-platinum/60 max-w-xl mx-auto leading-relaxed">
+                Thoughts on building, shipping, and the journey from idea to reality.
+            </p>
+        </header>
+        
+        <!-- Posts List -->
+        <div class="space-y-8">
+            {posts.map((post) => (
+                <article class="group">
+                    <a href={`/blog/${post.id}`} class="block bg-charcoal/30 border border-smoke/50 rounded-2xl p-8 md:p-10 hover:border-gold/40 transition-all duration-300">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                            <time class="text-gold font-heading text-sm uppercase tracking-widest">
+                                {post.data.pubDate.toLocaleDateString('en-us', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: 'numeric',
+                                })}
+                            </time>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-heading font-bold text-white mb-4 group-hover:text-gold transition-colors leading-tight">
+                            {post.data.title}
+                        </h2>
+                        {post.data.description && (
+                            <p class="text-platinum/70 leading-relaxed text-lg">
+                                {post.data.description}
+                            </p>
+                        )}
+                        <div class="mt-6 flex items-center gap-2 text-gold font-heading font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                            Read article
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </article>
+            ))}
+        </div>
+        
+        {posts.length === 0 && (
+            <div class="text-center py-20">
+                <p class="text-platinum/60 text-lg">No posts yet. Check back soon.</p>
+            </div>
+        )}
+    </section>
+</Layout>

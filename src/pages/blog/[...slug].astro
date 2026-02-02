@@ -14,25 +14,63 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Layout title={post.data.title}>
-    <article class="max-w-prose mx-auto px-4 py-20 text-platinum">
-        <div class="mb-12 text-center">
+<Layout title={`${post.data.title} | Auderon`}>
+    <article class="max-w-3xl mx-auto px-6 py-20">
+        <!-- Back link -->
+        <a href="/blog" class="inline-flex items-center gap-2 text-muted hover:text-gold transition-colors mb-12 font-heading text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to Blog
+        </a>
+        
+        <!-- Header -->
+        <header class="mb-16 text-center">
             <div class="mb-4 text-gold font-heading uppercase tracking-widest text-sm">
                 {post.data.pubDate.toLocaleDateString('en-us', {
 					year: 'numeric',
-					month: 'short',
+					month: 'long',
 					day: 'numeric',
 				})}
             </div>
-            <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 leading-[1.1] tracking-tight">
                 {post.data.title}
             </h1>
-            <p class="text-xl text-muted font-light leading-relaxed italic">
-                {post.data.description}
-            </p>
-        </div>
-        <div class="prose prose-invert prose-lg prose-gold mx-auto">
+            {post.data.description && (
+                <p class="text-xl text-platinum/70 leading-relaxed max-w-2xl mx-auto">
+                    {post.data.description}
+                </p>
+            )}
+        </header>
+        
+        <div class="w-16 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent mx-auto mb-16"></div>
+        
+        <!-- Content - Uses Inter for readability -->
+        <div class="
+            prose prose-lg prose-invert max-w-none
+            prose-headings:font-heading prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-white
+            prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6
+            prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-4
+            prose-p:text-platinum/90 prose-p:leading-[1.8] prose-p:text-lg prose-p:mb-6
+            prose-a:text-gold prose-a:no-underline hover:prose-a:underline
+            prose-strong:text-white prose-strong:font-semibold
+            prose-blockquote:border-l-gold prose-blockquote:bg-charcoal/30 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-platinum/80
+            prose-code:text-gold prose-code:bg-charcoal/50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
+            prose-pre:bg-charcoal prose-pre:border prose-pre:border-smoke/50
+            prose-ul:text-platinum/90 prose-ol:text-platinum/90
+            prose-li:marker:text-gold
+        ">
             <Content />
         </div>
+        
+        <!-- Footer -->
+        <footer class="mt-20 pt-12 border-t border-smoke/30 text-center">
+            <a href="/blog" class="inline-flex items-center gap-3 text-platinum hover:text-gold transition-colors font-heading font-medium">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                More from the Blog
+            </a>
+        </footer>
     </article>
 </Layout>

@@ -2,27 +2,176 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Auderon | Dare to Build">
-	<main class="flex-grow flex flex-col justify-center items-center text-center px-4 py-20">
-        <div class="mb-8 opacity-90 hover:opacity-100 transition-opacity">
-            <img src="/logo.svg" alt="Auderon Logo" class="h-32 w-auto mx-auto" />
-        </div>
-		<h1 class="text-6xl md:text-9xl font-heading font-bold text-white mb-8 tracking-tighter">
-			Dare to Build.
-		</h1>
-        <p class="text-xl md:text-3xl text-muted max-w-3xl mx-auto mb-16 font-light leading-relaxed">
-            The studio for those who bridge the gap between <span class="text-white">intention</span> and <span class="text-gold">action</span>.
-        </p>
-        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <a href="/blog/hello-world" class="bg-gold text-obsidian px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                Read the Manifesto
-            </a>
-            <a href="#" class="border border-smoke text-platinum px-10 py-4 rounded-full font-heading font-bold text-lg hover:border-gold hover:text-gold transition-all duration-300">
-                Explore Projects
-            </a>
-        </div>
-	</main>
-    <footer class="py-8 text-center text-muted text-sm border-t border-smoke/30 w-full">
-        &copy; {new Date().getFullYear()} Auderon. Built with <span class="text-gold">♥</span> by Lucian.
-    </footer>
+<Layout title="Auderon | For Those Who Dare">
+	<!-- Hero Section -->
+	<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24 relative">
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(212,175,55,0.03)_0%,_transparent_70%)]"></div>
+		
+		<div class="relative z-10 max-w-5xl mx-auto">
+			<div class="mb-12 opacity-90 hover:opacity-100 transition-opacity duration-500">
+				<img src="/logo.svg" alt="Auderon" class="h-20 md:h-28 w-auto mx-auto" />
+			</div>
+			
+			<h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-8 tracking-tight leading-[0.95]">
+				For Those<br class="md:hidden" /> Who Dare.
+			</h1>
+			
+			<p class="text-xl md:text-2xl text-platinum/80 max-w-2xl mx-auto mb-16 leading-relaxed">
+				A product studio that transforms <span class="text-white font-medium">intention</span> into <span class="text-gold font-medium">shipped products</span>. We build tools for builders.
+			</p>
+			
+			<div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+				<a href="/blog/hello-world" class="bg-gold text-obsidian px-10 py-4 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+					Read the Manifesto
+				</a>
+				<a href="#philosophy" class="border border-smoke text-platinum px-10 py-4 rounded-full font-heading font-medium text-lg hover:border-gold/50 hover:text-white transition-all duration-300">
+					Learn More
+				</a>
+			</div>
+		</div>
+		
+		<div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+			<svg class="w-6 h-6 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Philosophy Section -->
+	<section id="philosophy" class="py-32 px-6 border-t border-smoke/30">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+				<div>
+					<p class="text-gold font-heading font-medium text-sm tracking-widest uppercase mb-6">Our Philosophy</p>
+					<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 tracking-tight leading-[1.1]">
+						Ideas are cheap.<br />
+						<span class="text-platinum/60">Execution is everything.</span>
+					</h2>
+					<div class="divider-gold mb-8"></div>
+					<p class="text-lg text-platinum/80 leading-relaxed mb-6">
+						The gap between "I should build that" and "I shipped it" is where most dreams die. We exist to close that gap.
+					</p>
+					<p class="text-lg text-platinum/60 leading-relaxed">
+						Auderon is built on a simple belief: <span class="text-white">bias to action wins</span>. Ship over perfect. Progress over planning. The arena over the sidelines.
+					</p>
+				</div>
+				
+				<div class="grid grid-cols-2 gap-6">
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
+						<div class="text-gold text-4xl font-heading font-bold mb-3">01</div>
+						<h3 class="text-white font-heading font-bold text-lg mb-2">Bias to Action</h3>
+						<p class="text-platinum/60 text-sm leading-relaxed">Ship over perfect. Done is better than debating.</p>
+					</div>
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
+						<div class="text-gold text-4xl font-heading font-bold mb-3">02</div>
+						<h3 class="text-white font-heading font-bold text-lg mb-2">Compound Progress</h3>
+						<p class="text-platinum/60 text-sm leading-relaxed">Small daily acts create outsized results over time.</p>
+					</div>
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
+						<div class="text-gold text-4xl font-heading font-bold mb-3">03</div>
+						<h3 class="text-white font-heading font-bold text-lg mb-2">Builder Solidarity</h3>
+						<p class="text-platinum/60 text-sm leading-relaxed">We're in the arena with you, not watching from above.</p>
+					</div>
+					<div class="bg-charcoal/50 border border-smoke/50 rounded-2xl p-8 hover:border-gold/30 transition-colors duration-300">
+						<div class="text-gold text-4xl font-heading font-bold mb-3">04</div>
+						<h3 class="text-white font-heading font-bold text-lg mb-2">Transparent Process</h3>
+						<p class="text-platinum/60 text-sm leading-relaxed">Show the work. Share the journey. Build in public.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What We Build Section -->
+	<section class="py-32 px-6 bg-charcoal/30 border-t border-smoke/30">
+		<div class="max-w-6xl mx-auto">
+			<div class="text-center mb-20">
+				<p class="text-gold font-heading font-medium text-sm tracking-widest uppercase mb-6">What We Build</p>
+				<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 tracking-tight">
+					Tools for Builders
+				</h2>
+				<p class="text-xl text-platinum/60 max-w-2xl mx-auto">
+					Products that help ambitious people turn ideas into reality, faster.
+				</p>
+			</div>
+			
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="group relative bg-obsidian border border-smoke/50 rounded-2xl p-10 hover:border-gold/40 transition-all duration-500 overflow-hidden">
+					<div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+					<div class="relative z-10">
+						<div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+							<svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+						</div>
+						<h3 class="text-white font-heading font-bold text-xl mb-3">AI-Powered Workflows</h3>
+						<p class="text-platinum/60 leading-relaxed">Automation that actually works. Less busywork, more building.</p>
+					</div>
+				</div>
+				
+				<div class="group relative bg-obsidian border border-smoke/50 rounded-2xl p-10 hover:border-gold/40 transition-all duration-500 overflow-hidden">
+					<div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+					<div class="relative z-10">
+						<div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+							<svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+							</svg>
+						</div>
+						<h3 class="text-white font-heading font-bold text-xl mb-3">Launch Frameworks</h3>
+						<p class="text-platinum/60 leading-relaxed">Proven playbooks to go from zero to shipped in weeks, not months.</p>
+					</div>
+				</div>
+				
+				<div class="group relative bg-obsidian border border-smoke/50 rounded-2xl p-10 hover:border-gold/40 transition-all duration-500 overflow-hidden">
+					<div class="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+					<div class="relative z-10">
+						<div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+							<svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-white font-heading font-bold text-xl mb-3">Builder Community</h3>
+						<p class="text-platinum/60 leading-relaxed">Connect with others who ship. Accountability, feedback, momentum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-32 px-6 border-t border-smoke/30 relative overflow-hidden">
+		<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(212,175,55,0.05)_0%,_transparent_60%)]"></div>
+		
+		<div class="max-w-4xl mx-auto text-center relative z-10">
+			<h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 tracking-tight leading-[1.1]">
+				Stop waiting.<br />
+				<span class="text-gold">Start building.</span>
+			</h2>
+			<p class="text-xl text-platinum/70 max-w-xl mx-auto mb-12 leading-relaxed">
+				Join the builders who've decided that someday is today. Read our manifesto and see if this is your tribe.
+			</p>
+			
+			<div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+				<a href="/blog/hello-world" class="bg-gold text-obsidian px-12 py-5 rounded-full font-heading font-bold text-lg hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_40px_rgba(212,175,55,0.25)]">
+					Read the Manifesto
+				</a>
+				<a href="/blog" class="text-platinum hover:text-gold font-heading font-medium text-lg transition-colors duration-300 flex items-center gap-2">
+					Explore the Blog
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="py-12 px-6 text-center border-t border-smoke/30">
+		<div class="max-w-6xl mx-auto">
+			<img src="/logo.svg" alt="Auderon" class="h-8 w-auto mx-auto mb-6 opacity-60" />
+			<p class="text-muted text-sm">
+				&copy; {new Date().getFullYear()} Auderon. Built with <span class="text-gold">intention</span>.
+			</p>
+		</div>
+	</footer>
 </Layout>

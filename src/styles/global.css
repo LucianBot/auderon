@@ -16,3 +16,32 @@
 body {
     @apply bg-obsidian text-platinum font-sans antialiased;
 }
+
+/* Satoshi OpenType Features - Alternate 't' (ss03) and '1' (ss04) */
+.font-heading,
+h1, h2, h3, h4, h5, h6,
+[class*="font-heading"] {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss03" 1, "ss04" 1;
+}
+
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gold glow effect for special elements */
+.glow-gold {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+}
+
+/* Subtle gradient overlay for depth */
+.gradient-fade {
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 10, 0.8) 100%);
+}
+
+/* Section divider line */
+.divider-gold {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
